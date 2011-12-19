@@ -1,4 +1,4 @@
-describe('hooks', function(){
+describe('example - hooks', function(){
   var setUp = false;
 
   beforeEach(function(done){
