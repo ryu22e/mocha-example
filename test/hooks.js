@@ -5,25 +5,25 @@ describe('example - hooks', function(){
       afterCount = 0;
 
   before(function(done) {
-    // Called once before test.
+    // Called once before all tests.
     beforeCount++;
     done();
   })
 
   beforeEach(function(done){
-    // Called before each test.
+    // Called before each tests.
     beforeEachCount++;
     done();
   })
 
   afterEach(function(done) {
-    // Called after each test.
+    // Called after each tests.
     afterEachCount++;
     done();
   });
 
   after(function(done) {
-    // Called once after test.
+    // Called once after all tests.
     afterCount++;
     afterCount.should.equal(1);
     done();
