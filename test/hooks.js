@@ -5,7 +5,7 @@ describe('example - hooks', function(){
       afterCount = 0;
 
   before(function(done) {
-    // Called once.
+    // Called once before test.
     beforeCount++;
     done();
   })
@@ -23,7 +23,7 @@ describe('example - hooks', function(){
   });
 
   after(function(done) {
-    // Called once.
+    // Called once after test.
     afterCount++;
     afterCount.should.equal(1);
     done();
