@@ -1,3 +1,4 @@
 --require should
 --reporter spec
+--globals myname,global1Called
 -G
