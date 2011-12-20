@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Mocha</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="../../mocha.css" />
+        <script src="../../mocha.js"></script>
+        <script>mocha.setup('bdd')</script>
+        <script>
+          function assert(expr, msg) {
+            if (!expr) throw new Error(msg || 'failed');
+          }
+          function add(a, b) {
+            return a + b;
+          }
+        </script>
+        <script>
+          onload = function(){
+            mocha
+              .run()
+              .globals(['foo', 'bar']) // acceptable globals 
+          };
+        describe('example - Synchronous code', function(){
+          describe('#add()', function(){
+            it('should return \'a + b\' when the values are \'a\' and \'b\'.', function(){
+              assert(add(1, 2) == 3);
+              assert(add(2, 3) == 5);
+            })
+          })
+        })
+        describe('example - Asynchronous code', function(){
+          describe('#waitAndAdd()', function(){
+            it('should return \'a + b\' when the values are \'a\' and \'b\'.', function(done){
+                setTimeout(function() {
+                    assert(add(1, 2) == 3);
+                    done();
+                }, 1000);
+            })
+          })
+        })
+        describe('example - pending test', function(){
+          describe('#minus()', function(){
+            it('should return \'a - b\' when the values are \'a\' and \'b\'.')
+          })
+        })
+        </script>
+    </head>
+    <body>
+        <div id="mocha"></div>
+    </body>
+</html>
+
