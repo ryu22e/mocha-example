@@ -6,8 +6,8 @@
         { "name": "Ryuji Tsutsui", "email": "ryu22e@gmail.com" }
     ]
   , "devDependencies": {
-        "mocha": "0.3.6"
-      , "should": "0.3.2"
+        "mocha": ">=0.3.6"
+      , "should": ">=0.3.2"
     }
   , "main": "lib/example"
   , "engines": { "node": ">=0.6.5" }
