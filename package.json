@@ -1,0 +1,17 @@
+{
+    "name": "mocha-example"
+  , "description": "This is example for mocha(http://visionmedia.github.com/mocha/)."
+  , "version": "1.0.0"
+  , "contributors": [
+        { "name": "Ryuji Tsutsui", "email": "ryu22e@gmail.com" }
+    ]
+  , "devDependencies": {
+        "mocha": "0.3.6"
+      , "should": "0.3.2"
+    }
+  , "main": "lib/example"
+  , "engines": { "node": ">=0.6.5" }
+  , "scripts": {
+        "test": "make test"
+    }
+}
