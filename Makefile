@@ -1,5 +1,6 @@
+REPORTER = dot
 test:
-	~/node_modules/.bin/mocha \
-		--reporter list
+	./node_modules/.bin/mocha \
+		--reporter $(REPORTER)
 
 .PHONY: test
